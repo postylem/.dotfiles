@@ -1,0 +1,12 @@
+#!/bin/bash
+mkdir -p ~/.config/nvim/plugin
+# mkdir -p ~/.config/nvim/after/plugin
+# mkdir -p ~/.config/nvim/lua
+
+find . -regex ".*\.vim$" -print0 |
+  while read -rd $'\0' filename; do
+    F=${filename/.\//}
+    echo "linking" "$F"
+    rm -rf ~/.config/nvim/"$F"
+    ln -s ~/.dotfiles/nvim/"$F" ~/.config/nvim/"$F"
+  done
