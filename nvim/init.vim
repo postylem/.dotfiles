@@ -3,7 +3,7 @@
 " source ~/.vimrc
 
 """"" GENERAL SETTINGS
-" are in plugin/config-sets.vim
+" are in plugin/config-sets.vim (use `gf` go go there, if you want)
 
 """"" PLUGINS (vim-plug)
 call plug#begin('~/.vim/plugged')
@@ -23,9 +23,10 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'        " requires popup and plenary
 call plug#end()
 
-""""" EDITOR SETTINGS
+""""" EDITOR SETTINGS and `let`s
 set termguicolors " to get 256 colors in terminal
 colorscheme gruvbox
+let g:netrw_liststyle = 3 " to get default hierarchical netrw view
 
 " dealing with mispelllings
 setlocal spell spelllang=en_ca,en_us
