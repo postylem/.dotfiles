@@ -1,3 +1,5 @@
+DEPRECATED
+
 This is where I store my `.config/nvim/` config files.  
 
 Workflow:
